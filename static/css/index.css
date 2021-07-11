@@ -1,0 +1,116 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+/* ########################################### Icon bar ####################################*/
+.border{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding:4px 0px 4px 0px;
+}
+
+.left{
+    float:right;
+    color:black;
+    font-size:16px;
+}
+.left>a{
+    margin : 0px 10px 0px 10px;
+}
+
+.icon{
+    height:20px;
+    width:20px;
+    margin-left:10px;
+}
+
+
+/* ########################################### image slides ####################################*/
+.slides{
+    width:100%;
+    height:500px;
+}
+
+/* ########################################### Heading ####################################*/
+.hor-center{
+    display:flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.heading{
+    margin: 13px 0px 13px 0px;
+    font-family: myFirstFont;
+    font-weight:900;
+    font-size:40px;
+    font-style:bold;
+    color: black;
+    animation: my-move 5s infinite;
+}
+
+@keyframes my-move {
+  from {color: red;}
+  to {color: yellow;}
+}
+
+/* ####################################### Category buttons ###################################*/
+.category_buttons{
+    border:None;
+
+    width:10rem;
+    height:3rem;
+    font-family: myFirstFont;
+    background-image: linear-gradient(180deg, white, gray);
+}
+
+.category_buttons:hover {
+  background-image: linear-gradient(180deg, white, white);
+}
+
+
+/* ########################################  Shopping list  ########################################*/
+.flex-container{
+    display:flex;
+    border: 1px solid black;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+.image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding:0 0.5rem 0 0.5rem;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
